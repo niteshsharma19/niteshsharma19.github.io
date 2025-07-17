@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitesh Sharma | DevOps Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontSize: {
+            base: '1.125rem',
+            lg: '1.25rem',
+            xl: '1.5rem',
+            '2xl': '2rem',
+            '3xl': '2.5rem',
+            '4xl': '3rem',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+  
+  <!-- Navbar -->
+   <nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow px-8 py-4 flex justify-between items-center">
+
+    <h1 class="text-2xl font-bold">Nitesh Sharma</h1>
+    <ul class="flex gap-6 font-medium text-lg">
+      <li><a href="#about" class="hover:text-blue-500">About</a></li>
+      <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+      <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+      <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      <a href="https://drive.google.com/file/d/1l9p-AfAZk7QDlKy0U6RzoJ44pSFydAhs/view?usp=drivesdk" target="_blank" class="text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+        📄 Resume
+      </a>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="px-8 py-10 pt-24">
+    <div class="flex items-center gap-6">
+      <img src="https://avatars.githubusercontent.com/u/0000000?v=4" alt="avatar" class="w-24 h-24 rounded-full border-2 border-gray-500">
+      <div>
+        <h2 class="text-3xl font-bold">Nitesh Sharma</h2>
+        <p class="text-gray-400 dark:text-gray-300 text-lg">DevOps Engineer</p>
+      </div>
+    </div>
+    <p class="mt-6 max-w-3xl text-lg leading-relaxed">
+      I’m an aspiring DevOps Engineer with experience in building CI/CD pipelines, automating tasks using Python, and managing Linux systems. I am passionate about learning new technologies and improving operational efficiency.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="px-8 py-10 pt-24">
+    <h2 class="text-3xl font-bold mb-6">Projects</h2>
+    <div>
+      <h3 class="text-xl font-semibold">CI/CD Pipeline with Jenkins and Docker</h3>
+      <p class="text-sm text-gray-400">July 2025</p>
+      <p class="mt-1">Created a CI/CD pipeline using Jenkins for automated builds and Docker for containerization and deployment.</p>
+    </div>
+    <div class="mt-6">
+      <h3 class="text-xl font-semibold">Task Manager Script (In Progress)</h3>
+      <p class="text-sm text-gray-400">Under Development</p>
+      <p class="mt-1">Developing a Python-based task manager for automating system tasks.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="px-8 py-10 pt-24">
+    <h2 class="text-3xl font-bold mb-6">Skills</h2>
+    <div class="flex flex-wrap gap-3 text-base">
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">Jenkins</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">Docker</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">Python</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">Linux</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">CI/CD</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">Shell Scripting</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">Git</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-800 rounded-full">AWS</span>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-8 py-10 pt-24">
+    <h2 class="text-3xl font-bold mb-6">Contact</h2>
+    <p class="text-lg">Email: <a href="mailto:nitesh19b@gmail.com" class="text-blue-400 hover:underline">nitesh19b@gmail.com</a></p>
+    <div class="mt-4">
+      <a href="https://github.com/niteshsharma19" target="_blank" class="px-4 py-2 mr-2 bg-gray-700 text-white rounded hover:bg-gray-600">GitHub</a>
+      <a href="https://linkedin.com/in/niteshsharma19" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Work With Me Section -->
+  <section id="work-with-me" class="py-12 px-8 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">🙋‍♂️ Want to Work With Me?</h2>
+      <p class="text-lg mb-4">
+        I’m open to <span class="font-semibold text-blue-600 dark:text-blue-400">remote work</span>,
+        collaborations, and internships.
+      </p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-base">
+        <li>⚙️ Need help automating your deployments?</li>
+        <li>📄 Want scripts for document or data extraction?</li>
+        <li>🐳 Need someone to manage or build Docker + CI/CD flows?</li>
+      </ul>
+      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+        Let’s Connect
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-6 text-sm text-gray-500 dark:text-gray-400">
+    &copy; 2025 Nitesh Sharma. All rights reserved.
+  </footer>
+
+</body>
+</html>
