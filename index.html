@@ -57,18 +57,67 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="px-8 py-14 max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-6">Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-        <h3 class="text-xl font-semibold">CI/CD Pipeline with Jenkins and Docker</h3>
-        <p class="text-sm text-gray-400">July 2025</p>
-        <p class="mt-1">Created a CI/CD pipeline using Jenkins for automated builds and Docker for containerization and deployment.</p>
-      </div>
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-        <h3 class="text-xl font-semibold">Task Manager Script (In Progress)</h3>
-        <p class="text-sm text-gray-400">Under Development</p>
-        <p class="mt-1">Developing a Python-based task manager for automating system tasks.</p>
+ <section id="projects" class="px-8 py-14 max-w-6xl mx-auto">
+  <h2 class="text-4xl font-bold mb-6">Projects</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    
+<!-- Project 1: CI/CD Pipeline with Jenkins and Docker -->
+<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+  <h3 class="text-xl font-semibold">✅ CI/CD Pipeline with Jenkins and Docker</h3>
+  <p class="text-sm text-gray-400">📅 July 2025</p>
+  <p class="mt-1">
+    Set up a complete CI/CD pipeline to automate the build and deployment of applications using Jenkins and Docker. The process includes automatic source code retrieval, image building, and container deployment.
+  </p>
+  <ul class="list-disc list-inside text-gray-400 mb-3 mt-2">
+    <li>Configured Jenkins pipelines (freestyle and declarative) for automated build triggers</li>
+    <li>Integrated GitHub for version control and webhook-based automation</li>
+    <li>Built Docker images directly from code commits and pushed to DockerHub</li>
+    <li>Deployed Docker containers to test environment using shell scripts</li>
+    <li>Included basic health checks in the Jenkins pipeline</li>
+  </ul>
+  <p class="text-gray-300 text-sm">
+    <strong>Tech Stack:</strong> GitHub · Jenkins · Docker · DockerHub · Bash · Webhooks
+  </p>
+</div>
+
+
+    <!-- Project 2: DevOps to Kubernetes -->
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+      <h3 class="text-xl font-semibold">🚀 End-to-End DevOps Project: Code to Kubernetes Deployment</h3>
+      <p class="text-sm text-gray-400">📅 July 2025</p>
+      <p class="mt-1">
+        Built a complete CI/CD pipeline from code to Kubernetes using Python Flask, Jenkins, Docker, and Minikube.
+        Verified dynamic load balancing and pod scaling.
+      </p>
+      <ul class="list-disc list-inside text-gray-400 mb-3 mt-2">
+        <li>Flask app displaying dynamic IP & hostname</li>
+        <li>Jenkins automation to build & push Docker image</li>
+        <li>DockerHub integration for image storage</li>
+        <li>Kubernetes deployment via Minikube (3 replicas)</li>
+        <li>Confirmed load balancing across pods</li>
+      </ul>
+      <p class="text-gray-300 text-sm">
+        <strong>Tech Stack:</strong> AWS EC2 · GitHub · Jenkins · Docker · DockerHub · Kubernetes (Minikube) · Python Flask
+      </p>
+    </div>
+
+    <!-- Project 3: Under Development -->
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+      <h3 class="text-xl font-semibold">🛠️ Task Manager Script</h3>
+      <p class="text-sm text-yellow-400">🔧 Under Development</p>
+      <p class="mt-1">
+        Developing a Python-based CLI tool to automate repetitive Linux system administration tasks like process monitoring, file cleanup, and scheduling.
+      </p>
+      <p class="text-gray-300 text-sm mt-2">
+        <strong>Tech Stack:</strong> Python · Bash · Linux Cron · psutil
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
       </div>
     </div>
   </section>
