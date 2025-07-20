@@ -166,9 +166,9 @@
 </button>
 
 <!-- Contact Form Modal -->
-<div id="contactForm" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-  <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-lg relative">
-    
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-lg relative transform transition-all duration-300 scale-95 opacity-0" id="modalBox">
+
     <!-- Close Button -->
     <button onclick="toggleForm()" class="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-red-500 text-2xl font-bold" aria-label="Close">
       ×
@@ -177,59 +177,99 @@
     <!-- Heading -->
     <h2 class="text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-white">Let's Connect</h2>
 
-    <!-- Contact Section Wrapper -->
-<div id="contactForm" class="max-w-xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg space-y-6">
+    <!-- Contact Form -->
+    <form id="formElement" action="https://formsubmit.co/nitesh19b@gmail.com" method="POST" target="hidden_iframe" onsubmit="showSuccessPopup()" class="space-y-5">
 
-  <!-- Contact Form -->
-  <form action="https://formsubmit.co/nitesh19b@gmail.com" method="POST" class="space-y-5">
+      <!-- Hidden Fields -->
+      <input type="hidden" name="_subject" value="New Portfolio Message">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-    <!-- Hidden Fields -->
-    <input type="hidden" name="_subject" value="New Portfolio Message">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://niteshsharma19.github.io/thank-you.html">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name"
+               class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
 
-    <!-- Name -->
-    <div>
-      <label for="name" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your Name"
-             class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-    </div>
+      <!-- Email -->
+      <div>
+        <label for="email" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com"
+               class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
 
-    <!-- Email -->
-    <div>
-      <label for="email" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
-      <input type="email" id="email" name="email" required placeholder="your@email.com"
-             class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-    </div>
+      <!-- Phone Number -->
+      <div>
+        <label for="phone" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number"
+               class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
 
-    <!-- Phone Number -->
-    <div>
-      <label for="phone" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number"
-             class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <!-- Message -->
+      <div>
+        <label for="message" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
 
-    </div>
+      <!-- Buttons -->
+      <div class="flex justify-end space-x-3 pt-4">
+        <button type="button" onclick="toggleForm()" class="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">Cancel</button>
+        <button type="submit" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Send</button>
+      </div>
+    </form>
 
-    <!-- Message -->
-    <div>
-      <label for="message" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
-      <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex justify-end space-x-3 pt-4">
-      <button type="button" onclick="toggleForm()" class="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">Cancel</button>
-      <button type="submit" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Send</button>
-    </div>
-  </form>
+    <!-- Hidden iframe to avoid page reload -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+  </div>
 </div>
 
-<!-- Form Toggle Script -->
+<!-- Success Popup -->
+<div id="successPopup" class="fixed top-6 right-6 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg hidden z-50 transition transform duration-300 scale-95">
+  ✅ Thank you! We'll connect with you soon.
+</div>
+
+<!-- Script -->
 <script>
   function toggleForm() {
-    const form = document.getElementById('contactForm');
-    form.classList.toggle('hidden');
+    const modal = document.getElementById('contactModal');
+    const box = document.getElementById('modalBox');
+
+    const isHidden = modal.classList.contains('hidden');
+
+    if (isHidden) {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        box.classList.remove('scale-95', 'opacity-0');
+        box.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    } else {
+      box.classList.add('scale-95', 'opacity-0');
+      box.classList.remove('scale-100', 'opacity-100');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+  }
+
+  function showSuccessPopup() {
+    setTimeout(() => {
+      const popup = document.getElementById('successPopup');
+      popup.classList.remove('hidden', 'scale-95');
+      popup.classList.add('scale-100');
+
+      setTimeout(() => {
+        popup.classList.add('scale-95');
+        popup.classList.remove('scale-100');
+        setTimeout(() => {
+          popup.classList.add('hidden');
+        }, 300);
+      }, 4000); // hide after 4 seconds
+
+      document.getElementById('formElement').reset(); // reset form
+      toggleForm(); // hide modal
+    }, 1000);
   }
 </script>
 
